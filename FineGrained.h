@@ -9,8 +9,8 @@ class Node
 public:
     Node(int data) : value(data), next(nullptr), node_mutex(new std::mutex) {}
     int value = 0;
-	Node* next = nullptr;
-	std::mutex* node_mutex;
+    Node* next = nullptr;
+    std::mutex* node_mutex;
 };
 
 
@@ -36,8 +36,8 @@ public:
     void show();
 
 private:
-	Node* head = nullptr;
-	std::mutex* queue_mutex;
+    Node* head = nullptr;
+    std::mutex* queue_mutex;
     std::shared_mutex mutex;
     std::condition_variable_any data_cond;
 };
